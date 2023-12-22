@@ -15,6 +15,7 @@ struct AlertItem: Identifiable{
 }
 
 struct AlertContext{
+    //Marks: -Network Alerts
     static let invalidURL = AlertItem(title: Text("Invalid API"),
                                       message: Text("API endpoint isn't working, Please check the codebase"))
                             
@@ -29,5 +30,12 @@ struct AlertContext{
     
     static let unableToDecode = AlertItem(title: Text("Unable to Decode"),
                                           message: Text("Decoder object wasn't able to decode the JSON object, please check the format"))
+    
+    //Marks: -Account Alerts
+    static let isFieldEmpty = AlertItem(title: Text("Fields can't be empty"),
+                                          message: Text("You need to fill out all the fields in order to submit"))
+    
+    static let isEmailValid = AlertItem(title: Text("Email is not valid"),
+                                          message: Text("Please enter a valid email!"))
 }
 
