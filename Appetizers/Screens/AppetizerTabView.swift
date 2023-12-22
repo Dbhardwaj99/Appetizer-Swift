@@ -16,16 +16,16 @@ struct AppetizerTabView: View {
                     Text("Home")
                 }
             
-            AccountView()
-                .tabItem {
-                    Image(systemName: "person")
-                    Text("Account")
-                }
-            
             OrderView()
                 .tabItem {
                     Image(systemName: "bag")
                     Text("Order")
+                }
+            
+            AccountView()
+                .tabItem {
+                    Image(systemName: "person")
+                    Text("Account")
                 }
         }
         .accentColor(Color("brandPrimary"))

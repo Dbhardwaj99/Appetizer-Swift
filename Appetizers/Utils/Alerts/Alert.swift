@@ -37,5 +37,15 @@ struct AlertContext{
     
     static let isEmailValid = AlertItem(title: Text("Email is not valid"),
                                           message: Text("Please enter a valid email!"))
+    
+    static let userSuccess = AlertItem(title: Text("Preferences Saved"),
+                                          message: Text("Your Details and preferences have been saved for future uses."))
+    
+    static let userError = AlertItem(title: Text("Profile Error"),
+                                          message: Text("Something is wrong with the data you provided, please check!"))
+    
+    //Marks: -Order Alerts
+    static let orderPlaced = AlertItem(title: Text("Order Placed!"),
+                                          message: Text("Chillax, We will deliver your order shortly to your address"))
 }
 
