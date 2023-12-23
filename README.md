@@ -3,7 +3,7 @@ Appetizer is a project to practice and learn iOS development. Learning how to fe
 is the main goal of this App.
 
 ## Screens
-![image](https://github.com/Dbhardwaj99/Appetizer-Swift/blob/main/AppScreenShots/appetizerBanner.png)
+![image](https://i.ibb.co/ZTLMCTx/appetizer-Banner.png)
 
 
 ## App Store
