@@ -20,11 +20,12 @@ struct AppetizerListView: View {
                             viewModel.isShowingDetail = true
                         }
                 }
-                .navigationTitle("🍔 Appetizer")
+                .navigationTitle("Welcome \(viewModel.user.firstName)")
                 .disabled(viewModel.isShowingDetail)
             }
             .onAppear{
                 viewModel.getAppetizer()
+                viewModel.retriveUser()
             }
             .blur(radius: viewModel.isShowingDetail ? 20 : 0)
             

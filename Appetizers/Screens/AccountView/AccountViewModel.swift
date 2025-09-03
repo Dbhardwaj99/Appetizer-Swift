@@ -19,10 +19,10 @@ final class AccountViewModel: ObservableObject{
             return false
         }
         
-        guard user.email.isValidEmail else{
-            alertItem = AlertContext.isEmailValid
-            return false
-        }
+//        let user.email else{
+//            alertItem = AlertContext.isEmailValid
+//            return false
+//        }
         
         return true
     }

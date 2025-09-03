@@ -14,6 +14,8 @@ final class AppetizerListViewModel: ObservableObject{
     @Published var isLoading = false
     @Published var isShowingDetail = false
     @Published var selectedAppetizer: Appetizer?
+    @AppStorage("user") private var userData: Data?
+    @Published var user = User()
     
     func getAppetizer(){
         isLoading = true
@@ -38,6 +40,16 @@ final class AppetizerListViewModel: ObservableObject{
                     }
                 }
             }
+        }
+    }
+    
+    func retriveUser(){
+        guard let userData = userData else { return }
+        
+        do{
+            user = try JSONDecoder().decode(User.self, from: userData)
+        }catch{
+            alertItem = AlertContext.userError
         }
     }
 }

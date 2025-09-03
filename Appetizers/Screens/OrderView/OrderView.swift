@@ -10,7 +10,9 @@ import SwiftUI
 struct OrderView: View {
     @EnvironmentObject var order: Order
     @State private var showingAlert = false
-    @ObservedObject var ViewModel = AccountViewModel()
+    @ObservedObject var viewModel = AccountViewModel()
+    @StateObject var historyViewModel = OrderHistoryViewModel()
+    @Binding var isShowingDetail: Bool
     
     var body: some View {
         NavigationView{
@@ -26,14 +28,19 @@ struct OrderView: View {
                     
                     Spacer()
                     
-                    OrderSummaryView(address: ViewModel.user.address,
-                                     firstName: ViewModel.user.firstName,
+                    OrderSummaryView(address: viewModel.user.address,
+                                     firstName: viewModel.user.firstName,
                                      ammounnt: order.totalPrice)
                     
                     Button{
+                        let newOrder = Order()
+                        newOrder.items = order.items
+                        historyViewModel.addOrder(newOrder)
+                        
                         print("Order Placed")
                         showingAlert = true
                         order.items.removeAll()
+                        isShowingDetail = false
                     }label: {
                         APButton(title: "Order Now!")
                     }
@@ -51,9 +58,18 @@ struct OrderView: View {
                 }
             }
             .navigationTitle("🧾 Orders")
+            .toolbar{
+                ToolbarItem(placement: .navigationBarTrailing){
+                    Button{
+                        isShowingDetail = false
+                    }label: {
+                        XDismissButton()
+                    }
+                }
+            }
         }
         .onAppear{
-            ViewModel.retriveUser()
+            viewModel.retriveUser()
         }
     }
     
@@ -63,5 +79,5 @@ struct OrderView: View {
 }
 
 #Preview {
-    OrderView()
+    OrderView(isShowingDetail: .constant(true))
 }

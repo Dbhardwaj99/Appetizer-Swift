@@ -7,11 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		523316B12E6828A4007ED0C9 /* CartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523316B02E6828A4007ED0C9 /* CartButton.swift */; };
+		523316BA2E68477A007ED0C9 /* OrderHistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523316B72E68477A007ED0C9 /* OrderHistoryViewModel.swift */; };
+		523316BB2E68477A007ED0C9 /* OrderMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523316B82E68477A007ED0C9 /* OrderMapView.swift */; };
+		523316BC2E68477A007ED0C9 /* OrderHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523316B62E68477A007ED0C9 /* OrderHistoryView.swift */; };
 		C15E473C2B35A4D800E50BEC /* AppetizerDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15E473B2B35A4D800E50BEC /* AppetizerDetailView.swift */; };
 		C15E473F2B35B07400E50BEC /* APButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15E473E2B35B07400E50BEC /* APButton.swift */; };
 		C15E47412B35B12200E50BEC /* XDismissButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15E47402B35B12200E50BEC /* XDismissButton.swift */; };
 		C15E47432B35B9E000E50BEC /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15E47422B35B9E000E50BEC /* AccountViewModel.swift */; };
-		C15E47452B35BC7B00E50BEC /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15E47442B35BC7B00E50BEC /* String+Ext.swift */; };
 		C15E47472B35E66B00E50BEC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15E47462B35E66B00E50BEC /* User.swift */; };
 		C15E474A2B35FE3000E50BEC /* OrderEmptyState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15E47492B35FE3000E50BEC /* OrderEmptyState.swift */; };
 		C15E474C2B36013C00E50BEC /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15E474B2B36013C00E50BEC /* Order.swift */; };
@@ -34,6 +37,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		523316B02E6828A4007ED0C9 /* CartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartButton.swift; sourceTree = "<group>"; };
+		523316B62E68477A007ED0C9 /* OrderHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderHistoryView.swift; sourceTree = "<group>"; };
+		523316B72E68477A007ED0C9 /* OrderHistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderHistoryViewModel.swift; sourceTree = "<group>"; };
+		523316B82E68477A007ED0C9 /* OrderMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderMapView.swift; sourceTree = "<group>"; };
 		C15E473B2B35A4D800E50BEC /* AppetizerDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppetizerDetailView.swift; sourceTree = "<group>"; };
 		C15E473E2B35B07400E50BEC /* APButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APButton.swift; sourceTree = "<group>"; };
 		C15E47402B35B12200E50BEC /* XDismissButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XDismissButton.swift; sourceTree = "<group>"; };
@@ -72,6 +79,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		523316B92E68477A007ED0C9 /* OrderHistoryView */ = {
+			isa = PBXGroup;
+			children = (
+				523316B62E68477A007ED0C9 /* OrderHistoryView.swift */,
+				523316B72E68477A007ED0C9 /* OrderHistoryViewModel.swift */,
+				523316B82E68477A007ED0C9 /* OrderMapView.swift */,
+			);
+			path = OrderHistoryView;
+			sourceTree = "<group>";
+		};
 		C15E473D2B35B06700E50BEC /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
@@ -92,6 +109,7 @@
 		C1C1847E2B357F8A002B1FF3 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				523316B92E68477A007ED0C9 /* OrderHistoryView */,
 				C1C6B7AD2B34B920009134B9 /* AppetizerTabView.swift */,
 				C1C1847F2B357FA9002B1FF3 /* AppetizerListView */,
 				C1C184802B357FBD002B1FF3 /* AccountView */,
@@ -220,6 +238,7 @@
 		C1C6B7AA2B34B920009134B9 /* Appetizers */ = {
 			isa = PBXGroup;
 			children = (
+				523316B02E6828A4007ED0C9 /* CartButton.swift */,
 				C1C184862B3580A6002B1FF3 /* Model */,
 				C1C184822B358028002B1FF3 /* Utils */,
 				C1C184872B3580D4002B1FF3 /* Views */,
@@ -309,7 +328,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C15E47452B35BC7B00E50BEC /* String+Ext.swift in Sources */,
 				C1C6B7BC2B34B9BD009134B9 /* AccountView.swift in Sources */,
 				C15E474E2B360F3100E50BEC /* OrderSummaryView.swift in Sources */,
 				C1C184732B35479C002B1FF3 /* APError.swift in Sources */,
@@ -319,11 +337,15 @@
 				C15E474C2B36013C00E50BEC /* Order.swift in Sources */,
 				C1C6B7C02B34BE78009134B9 /* Appetizer.swift in Sources */,
 				C1C184792B3572AF002B1FF3 /* LoadingView.swift in Sources */,
+				523316B12E6828A4007ED0C9 /* CartButton.swift in Sources */,
 				C1C1847D2B357B25002B1FF3 /* RemoteImage.swift in Sources */,
 				C1C6B7AE2B34B920009134B9 /* AppetizerTabView.swift in Sources */,
 				C15E473C2B35A4D800E50BEC /* AppetizerDetailView.swift in Sources */,
 				C1C184712B3545D6002B1FF3 /* NetworkManager.swift in Sources */,
 				C1C6B7AC2B34B920009134B9 /* AppetizersApp.swift in Sources */,
+				523316BA2E68477A007ED0C9 /* OrderHistoryViewModel.swift in Sources */,
+				523316BB2E68477A007ED0C9 /* OrderMapView.swift in Sources */,
+				523316BC2E68477A007ED0C9 /* OrderHistoryView.swift in Sources */,
 				C1C184772B355D13002B1FF3 /* Alert.swift in Sources */,
 				C1C6B7BA2B34B9AA009134B9 /* AppetizerListView.swift in Sources */,
 				C1C6B7BE2B34B9C9009134B9 /* OrderView.swift in Sources */,
